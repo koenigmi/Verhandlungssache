@@ -6,14 +6,21 @@ Kein Einsatzhandbuch. Keine Anleitung zu Straftaten. Suizidale Krise nur als Dee
 
 ## Am iPhone öffnen
 
-Die App ist eine Website (Safari reicht, kein Offline-Zwang).
+Die App ist eine Website (Safari reicht, kein Offline-Zwang). **Keine eigene Domain kaufen oder eintragen.**
 
-1. Nach dem Merge: GitHub → **Settings → Pages → Source: GitHub Actions**.
-2. Das Repo ist aktuell **privat**. Damit Safari ohne GitHub-Login öffnet, unter **Settings → General → Change repository visibility** auf **Public** stellen (im Trainingstext stehen keine Geheimnisse).
-3. URL danach: [https://koenigmi.github.io/Verhandlungssache/](https://koenigmi.github.io/Verhandlungssache/)
-4. Im Safari: Teilen → **Zum Home-Bildschirm**. Fortschritt liegt in Safari auf diesem Gerät.
+### GitHub Pages ohne Domain
 
-Ohne öffentliches Repo: `npm run build` und den Ordner `dist` auf [Netlify Drop](https://app.netlify.com/drop) oder Cloudflare Pages ziehen. Dann die Netlify-URL am iPhone öffnen.
+1. Repo auf **Public** stellen (**Settings → General → Change repository visibility**). Privat bleibt die Seite hinter GitHub-Login — am iPhone unbrauchbar.
+2. **Settings → Pages**
+   - **Source:** GitHub Actions
+   - **Custom domain / Benutzerdefinierte Domain:** leer lassen, nicht speichern
+3. Beim ersten Deploy fragt GitHub oft, die Umgebung `github-pages` **freizugeben** (grüner Button Approve / Review deployments). Das ist keine Domain, nur eine einmalige Freigabe.
+4. Adresse danach automatisch: [https://koenigmi.github.io/Verhandlungssache/](https://koenigmi.github.io/Verhandlungssache/)
+5. iPhone-Safari → Teilen → **Zum Home-Bildschirm**
+
+### Schneller ohne Pages: Netlify Drop
+
+Wenn das Domain-Feld blockiert oder Pages hakelig ist: lokal `npm run build`, den Ordner `dist` auf [Netlify Drop](https://app.netlify.com/drop) ziehen. Netlify vergibt selbst eine Adresse wie `irgendwas.netlify.app` — die am iPhone öffnen.
 
 ## Lokal
 
