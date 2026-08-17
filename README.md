@@ -6,14 +6,15 @@ Kein Einsatzhandbuch. Keine Anleitung zu Straftaten. Suizidale Krise nur als Dee
 
 ## Am iPhone öffnen
 
-Die App ist eine Website (Safari reicht, kein Offline-Zwang).
+Die App ist eine Website. **Keine eigene Domain, nicht Jekyll.**
 
-1. Nach dem Merge: GitHub → **Settings → Pages → Source: GitHub Actions**.
-2. Das Repo ist aktuell **privat**. Damit Safari ohne GitHub-Login öffnet, unter **Settings → General → Change repository visibility** auf **Public** stellen (im Trainingstext stehen keine Geheimnisse).
-3. URL danach: [https://koenigmi.github.io/Verhandlungssache/](https://koenigmi.github.io/Verhandlungssache/)
-4. Im Safari: Teilen → **Zum Home-Bildschirm**. Fortschritt liegt in Safari auf diesem Gerät.
+1. **Settings → Pages → Source:** GitHub Actions (nicht „Deploy from a branch“, keine Jekyll-Vorlage).
+2. **Custom domain:** leer lassen.
+3. Wenn Actions mit `HttpError: Not Found` scheitert: Pages war beim Lauf noch aus. Jetzt **Actions → iPhone-Seiten → Re-run all jobs**.
+4. URL: [https://koenigmi.github.io/Verhandlungssache/](https://koenigmi.github.io/Verhandlungssache/)
+5. iPhone-Safari → Teilen → **Zum Home-Bildschirm**.
 
-Ohne öffentliches Repo: `npm run build` und den Ordner `dist` auf [Netlify Drop](https://app.netlify.com/drop) oder Cloudflare Pages ziehen. Dann die Netlify-URL am iPhone öffnen.
+Falls der erste Deploy die Umgebung `github-pages` anhält: dort einmal **Approve**.
 
 ## Lokal
 
